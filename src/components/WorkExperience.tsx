@@ -132,6 +132,9 @@ const experiences = [
       { src: "/images/work-experience/work1-img1.png", href: "https://w11265.proweaversite11.com/" },
       { src: "/images/work-experience/work1-img2.png", href: "https://www.elschammainternational.org/" },
       { src: "/images/work-experience/work1-img3.png", href: "https://www.myparamounthealthcare.com/" },
+      { src: "/images/work-experience/work1-img4.png", href: "https://www.bexarhospice.com/" },
+      { src: "/images/work-experience/work1-img5.png", href: "https://www.mountvalleymontessori.com/" },
+      { src: "/images/work-experience/work1-img6.png", href: "http://www.zionpentecostalfaithcenter.org/" },
     ],
   },
 ];
