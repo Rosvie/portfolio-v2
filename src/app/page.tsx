@@ -65,7 +65,7 @@ export default function Home() {
               className="mb-6 text-center text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
-              Rosvie Pepito <br />
+              Rosvie R. Pepito <br />
               <span className="block pt-3 text-lg text-gray-400  font-normal sm:pt-5 sm:text-xl lg:text-2xl">
                 <TypingEffect />
               </span>
