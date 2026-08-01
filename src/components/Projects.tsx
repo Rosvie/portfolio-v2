@@ -10,33 +10,33 @@ const projects = [
     demoLink: "https://rosvie.github.io/fortune-cookie/",
     skills: ["HTML", "CSS", "Javascript", "Typescript", "Vite"],
   },
-  {
-    id: "mount-valley",
-    title: "Dummy Title",
-    tagline: "A warm, welcoming site for a Montessori school.",
-    // image: "/images/proj-img2.png",
-    sourceLink: "https://github.com/Rosvie/fortune-cookie",
-    demoLink: "https://rosvie.github.io/fortune-cookie/",
-    skills: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
-  },
-  {
-    id: "zion-pentecostal",
-    title: "Dummy Title",
-    tagline: "A community hub for a local ministry.",
-    // image: "/images/proj-img3.png",
-    sourceLink: "https://github.com/Rosvie/fortune-cookie",
-    demoLink: "https://rosvie.github.io/fortune-cookie/",
-    skills: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
-  },
-  {
-    id: "dummy-project",
-    title: "Fortune Cookie",
-    tagline: "Tap the cookie to crack it open!",
-    // image: "/images/projects/img-fortune-cookie.png",
-    sourceLink: "https://github.com/Rosvie/fortune-cookie",
-    demoLink: "https://rosvie.github.io/fortune-cookie/",
-    skills: ["React", "TypeScript", "CSS Animations"],
-  },
+  // {
+  //   id: "mount-valley",
+  //   title: "Dummy Title",
+  //   tagline: "A warm, welcoming site for a Montessori school.",
+  //   // image: "/images/proj-img2.png",
+  //   sourceLink: "https://github.com/Rosvie/fortune-cookie",
+  //   demoLink: "https://rosvie.github.io/fortune-cookie/",
+  //   skills: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
+  // },
+  // {
+  //   id: "zion-pentecostal",
+  //   title: "Dummy Title",
+  //   tagline: "A community hub for a local ministry.",
+  //   // image: "/images/proj-img3.png",
+  //   sourceLink: "https://github.com/Rosvie/fortune-cookie",
+  //   demoLink: "https://rosvie.github.io/fortune-cookie/",
+  //   skills: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
+  // },
+  // {
+  //   id: "dummy-project",
+  //   title: "Fortune Cookie",
+  //   tagline: "Tap the cookie to crack it open!",
+  //   // image: "/images/projects/img-fortune-cookie.png",
+  //   sourceLink: "https://github.com/Rosvie/fortune-cookie",
+  //   demoLink: "https://rosvie.github.io/fortune-cookie/",
+  //   skills: ["React", "TypeScript", "CSS Animations"],
+  // },
 ];
 
 function Sparkle({
@@ -64,8 +64,8 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 w-full max-w-6xl">
       <p
-        className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl"
-        style={{ fontFamily: "var(--font-instrument-serif)" }}
+        className="mb-8 text-3xl font-medium sm:text-4xl md:text-5xl"
+        style={{ fontFamily: "var(--font-space-mono)" }}
       >
         Projects
       </p>
@@ -108,8 +108,8 @@ export default function Projects() {
               <Sparkle className="sparkle-twinkle absolute right-14 bottom-40 h-3 w-3 text-gray-400" style={{ animationDelay: "0.6s" }} />
 
               <h3
-                className="relative z-10 mb-2 text-center text-2xl font-semibold text-white sm:text-3xl"
-                style={{ fontFamily: "var(--font-instrument-serif)" }}
+                className="relative z-10 mb-2 text-center text-2xl font-medium text-white sm:text-3xl"
+                style={{ fontFamily: "var(--font-space-mono)" }}
               >
                 {project.title}
               </h3>

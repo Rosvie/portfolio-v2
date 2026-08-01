@@ -149,8 +149,8 @@ export default function WorkExperience() {
   return (
     <section id="work-experience" className="scroll-mt-24 w-full max-w-6xl">
       <h2
-        className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl"
-        style={{ fontFamily: "var(--font-instrument-serif)" }}
+        className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl font-medium"
+        style={{ fontFamily: "var(--font-space-mono)" }}
       >
         Work Experience
       </h2>

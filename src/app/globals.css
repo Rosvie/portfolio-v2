@@ -13,7 +13,7 @@
   --color-button-hover: #e5e5e5;
   
   /* Typography */
-  --font-heading: var(--font-instrument-serif);
+  --font-heading: var(--font-space-mono);
   --font-body: var(--font-inter);
   --font-size-heading: 3.5rem;
   --font-size-subheading: 1.25rem;
@@ -35,8 +35,8 @@
   --color-background: var(--color-background);
   --color-background-2: var(--color-background-2);
   --color-foreground: var(--color-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --font-sans: var(--font-space-mono); */
+  --font-mono: var(--font-space-mono);
 }
 
 * {
@@ -56,7 +56,15 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space-mono);
+  letter-spacing: 0.5px;
+}
 img {
   display: block;
   max-width: 100%;

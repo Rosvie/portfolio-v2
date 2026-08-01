@@ -9,7 +9,7 @@ export default function Home() {
     <div className="w-full min-h-screen overflow-x-hidden">
       <nav className="fixed left-0 right-0 top-0 z-50 flex flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-8 lg:px-12 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_40px_rgba(255,255,255,0.06)] backdrop-blur-lg">
         <div
-          style={{ fontFamily: "var(--font-instrument-serif)" }}
+          style={{ fontFamily: "var(--font-space-mono)" }}
           className="text-2xl font-semibold"
         >
           <img src="https://avatars.githubusercontent.com/u/169994948?v=4" alt="avatar" className="rounded-full size-[44px] sm:size-[50px]" />
@@ -63,10 +63,10 @@ export default function Home() {
           <div className="mx-auto flex flex-col items-center justify-center rounded-4xl w-full max-w-6xl py-16 sm:px-16 sm:py-20 lg:px-24 lg:py-28">
             <h1
               className="mb-6 text-center text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
-              style={{ fontFamily: "var(--font-instrument-serif)" }}
+              style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Rosvie Pepito <br />
-              <span className="block pt-3 text-lg text-gray-400 sm:pt-5 sm:text-xl lg:text-2xl">
+              <span className="block pt-3 text-lg text-gray-400  font-normal sm:pt-5 sm:text-xl lg:text-2xl">
                 <TypingEffect />
               </span>
             </h1>

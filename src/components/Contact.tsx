@@ -11,8 +11,8 @@ export default function Contact() {
   return (
     <section id="contact" className="w-full max-w-6xl scroll-mt-24">
       <h2
-        className="mb-8 text-3xl font-bold sm:text-4xl md:text-5xl"
-        style={{ fontFamily: "var(--font-instrument-serif)" }}
+        className="mb-8 text-3xl font-medium sm:text-4xl md:text-5xl"
+        style={{ fontFamily: "var(--font-space-mono)" }}
       >
         Let&apos;s Connect
       </h2>
