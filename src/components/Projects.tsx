@@ -5,38 +5,19 @@ const projects = [
     id: "fortune-cookie",
     title: "Fortune Cookie",
     tagline: "Tap the cookie to crack it open!",
-    // image: "https://rosvie.github.io/fortune-cookie/",
     sourceLink: "https://github.com/Rosvie/fortune-cookie",
     demoLink: "https://rosvie.github.io/fortune-cookie/",
     skills: ["HTML", "CSS", "Javascript", "Typescript", "Vite"],
   },
-  // {
-  //   id: "mount-valley",
-  //   title: "Dummy Title",
-  //   tagline: "A warm, welcoming site for a Montessori school.",
-  //   // image: "/images/proj-img2.png",
-  //   sourceLink: "https://github.com/Rosvie/fortune-cookie",
-  //   demoLink: "https://rosvie.github.io/fortune-cookie/",
-  //   skills: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
-  // },
-  // {
-  //   id: "zion-pentecostal",
-  //   title: "Dummy Title",
-  //   tagline: "A community hub for a local ministry.",
-  //   // image: "/images/proj-img3.png",
-  //   sourceLink: "https://github.com/Rosvie/fortune-cookie",
-  //   demoLink: "https://rosvie.github.io/fortune-cookie/",
-  //   skills: ["HTML", "CSS", "PHP", "MySQL", "JavaScript"],
-  // },
-  // {
-  //   id: "dummy-project",
-  //   title: "Fortune Cookie",
-  //   tagline: "Tap the cookie to crack it open!",
-  //   // image: "/images/projects/img-fortune-cookie.png",
-  //   sourceLink: "https://github.com/Rosvie/fortune-cookie",
-  //   demoLink: "https://rosvie.github.io/fortune-cookie/",
-  //   skills: ["React", "TypeScript", "CSS Animations"],
-  // },
+  {
+    id: "email-template",
+    title: "Email Template",
+    tagline: "A responsive email template for personal signatures.",
+    sourceLink: "https://github.com/Rosvie/email-template-sample/",
+    demoLink: "https://rosvie.github.io/email-template-sample/",
+    skills: ["HTML", "SCSS", "Github"],
+  },
+  
 ];
 
 function Sparkle({

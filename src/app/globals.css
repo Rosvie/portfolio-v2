@@ -138,6 +138,29 @@ img {
   outline-offset: 2px;
 }
 
+.link-me {
+  display: inline-block;
+  position: relative;
+}
+
+.link-me::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.link-me:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;

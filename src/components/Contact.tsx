@@ -36,7 +36,7 @@ export default function Contact() {
             </p>
             <a
               href={`mailto:${CONTACT.email}`}
-              className="text-base text-gray-200 hover:text-white transition"
+              className="link-me text-base text-gray-200 hover:text-white transition"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {CONTACT.email}
@@ -65,7 +65,7 @@ export default function Contact() {
               href={CONTACT.linkedinLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base text-gray-200 hover:text-white transition"
+              className="link-me text-base text-gray-200 hover:text-white transition"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               linkedin.com/in/rosviepepito
@@ -93,7 +93,7 @@ export default function Contact() {
               href={CONTACT.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base text-gray-200 hover:text-white transition"
+              className="link-me text-base text-gray-200 hover:text-white transition"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               https://github.com/rosvie

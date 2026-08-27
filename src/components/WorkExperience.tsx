@@ -403,7 +403,7 @@ export default function WorkExperience() {
                 <button
                   type="button"
                   onClick={() => toggleGallery(exp.id)}
-                  className="mt-6 rounded-full border border-gray-500 px-4 py-2 text-sm font-semibold text-white transition hover:border-white hover:bg-white hover:text-black"
+                  className="mt-6 rounded-full border border-gray-500 px-4 py-2 text-sm font-semibold text-white transition cursor-pointer hover:border-white hover:text-white hover:shadow-[0_0_5px_#fff,0_0_15px_#fff] transition-shadow duration-300"
                   aria-expanded={isOpen}
                 >
                   {isOpen ? "Hide gallery" : "Take a look"}
