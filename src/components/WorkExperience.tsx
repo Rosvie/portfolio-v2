@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * HorizontalGallery
@@ -347,12 +347,6 @@ const experiences = [
 ];
 
 export default function WorkExperience() {
-  const [openId, setOpenId] = useState<string | null>(null);
-
-  const toggleGallery = (id: string) => {
-    setOpenId((current) => (current === id ? null : id));
-  };
-
   return (
     <section id="work-experience" className="scroll-mt-24 w-full max-w-6xl">
       <h2
@@ -363,63 +357,46 @@ export default function WorkExperience() {
       </h2>
 
       <div className="work-exp-holder space-y-6">
-        {experiences.map((exp) => {
-          const isOpen = openId === exp.id;
+        {experiences.map((exp) => (
+          <div
+            key={exp.id}
+            className="overflow-hidden rounded-lg border border-gray-700 bg-gray-900/30"
+          >
+            <div className="w-full bg-gray-900/30 p-6 transition sm:p-8">
+              <h3
+                className="mb-2 text-2xl font-bold text-white sm:text-3xl"
+                style={{ fontFamily: "var(--font-instrument-serif)" }}
+              >
+                {exp.company}
+              </h3>
+              <p
+                className="mb-4 text-base text-gray-300 italic sm:text-lg"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {exp.position}
+              </p>
+              <span className="mb-6 inline-block rounded-full bg-white px-4 py-2 text-sm font-medium text-black">
+                {exp.duration}
+              </span>
 
-          return (
-            <div
-              key={exp.id}
-              className="overflow-hidden rounded-lg border border-gray-700 bg-gray-900/30"
-            >
-              <div className="w-full bg-gray-900/30 p-6 transition sm:p-8">
-                <h3
-                  className="mb-2 text-2xl font-bold text-white sm:text-3xl"
-                  style={{ fontFamily: "var(--font-instrument-serif)" }}
-                >
-                  {exp.company}
-                </h3>
-                <p
-                  className="mb-4 text-base text-gray-300 italic sm:text-lg"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {exp.position}
-                </p>
-                <span className="mb-6 inline-block rounded-full bg-white px-4 py-2 text-sm font-medium text-black">
-                  {exp.duration}
-                </span>
+              <ul
+                className="space-y-3 text-gray-300"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {exp.description.map((point, index) => (
+                  <li key={index} className="flex gap-3">
+                    <span className="min-w-fit text-white">•</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
 
-                <ul
-                  className="space-y-3 text-gray-300"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {exp.description.map((point, index) => (
-                    <li key={index} className="flex gap-3">
-                      <span className="min-w-fit text-white">•</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  type="button"
-                  onClick={() => toggleGallery(exp.id)}
-                  className="mt-6 rounded-full border border-gray-500 px-4 py-2 text-sm font-semibold text-white transition cursor-pointer hover:border-white hover:text-white hover:shadow-[0_0_5px_#fff,0_0_15px_#fff] transition-shadow duration-300"
-                  aria-expanded={isOpen}
-                >
-                  {isOpen ? "Hide gallery" : "Take a look"}
-                </button>
-
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    isOpen ? "mt-6 max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  {isOpen ? <HorizontalGallery gallery={exp.gallery} company={exp.company} /> : null}
-                </div>
+              <div className="work-exp-gallery-wrap mt-6">
+                <HorizontalGallery gallery={exp.gallery} company={exp.company} />
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );

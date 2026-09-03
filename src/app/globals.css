@@ -111,6 +111,11 @@ img {
 }
 
 /* Work experience gallery carousel (WorkExperience.tsx) */
+/* Wraps the always-visible carousel under each experience's bullet list. */
+.work-exp-gallery-wrap {
+  width: 100%;
+}
+
 /* GPU-composited layer + sub-pixel smoothing for the auto-scrolling track,
    so the continuous loop renders without shimmer/tearing. */
 .work-gallery-track {
