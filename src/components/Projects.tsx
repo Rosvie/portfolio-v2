@@ -17,6 +17,14 @@ const projects = [
     demoLink: "https://rosvie.github.io/email-template-sample/",
     skills: ["HTML", "SCSS", "Github"],
   },
+    {
+    id: "food-decision-wheel",
+    title: "What Should I Eat?",
+    tagline: "MAy it be a game or curiosity. Add your options, spin the wheel, let it decide.",
+    sourceLink: "https://github.com/Rosvie/food-decision-wheel/",
+    demoLink: "https://rosvie.github.io/food-decision-wheel/",
+    skills: ["HTML", "CSS3", "Javascript", "Github"],
+  },
   
 ];
 
