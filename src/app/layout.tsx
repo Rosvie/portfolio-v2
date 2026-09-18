@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rosvie P - Frontend Developer",
-  description: "Frontend Developer specializing in responsive, user-focused web applications and websites.",
+  title: "Rosvie Pepito | Frontend Developer",
+  description: "Frontend & WordPress Developer building responsive, pixel-perfect websites with React, Next.js, WordPress, and design-to-code workflows. Available for remote work.",
   icons: {
     icon: "/favicon.png",
   },

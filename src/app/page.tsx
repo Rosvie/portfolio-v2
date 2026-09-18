@@ -61,6 +61,10 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center">
         <section id="about" className="scroll-mt-24 mt-20 px-8 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" >
           <div className="mx-auto flex flex-col items-center justify-center rounded-4xl w-full max-w-6xl py-16 sm:px-16 sm:py-20 lg:px-24 lg:py-28">
+              <div className="availability">
+                <span className="availability-dot"></span>
+                Available for remote work
+              </div>
             <h1
               className="mb-6 text-center text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
               style={{ fontFamily: "var(--font-space-mono)" }}
@@ -86,13 +90,13 @@ export default function Home() {
 
         <div className="w-full px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" style={{ backgroundColor: "var(--color-background-2)" }}>
           <div className="mx-auto max-w-6xl">
-            <Projects />
+            <WorkExperience />
           </div>
         </div>
 
         <div className="w-full px-4 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
           <div className="mx-auto max-w-6xl">
-            <WorkExperience />
+            <Projects />
           </div>
         </div>
 
