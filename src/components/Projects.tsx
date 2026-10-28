@@ -20,12 +20,19 @@ const projects = [
     {
     id: "food-decision-wheel",
     title: "What Should I Eat?",
-    tagline: "MAy it be a game or curiosity. Add your options, spin the wheel, let it decide.",
+    tagline: "May it be a game or curiosity. Add your options, spin the wheel, let it decide.",
     sourceLink: "https://github.com/Rosvie/food-decision-wheel/",
     demoLink: "https://rosvie.github.io/food-decision-wheel/",
     skills: ["HTML", "CSS3", "Javascript", "Github"],
   },
-  
+      {
+    id: "laundry-email-template",
+    title: "Bubbly Basket Laundry Email Template",
+    tagline: "Bubbly Basket Laundry Email Template. A simple, colorful and responsive email template for a laundry business, built with SCSS.",
+    sourceLink: "https://github.com/Rosvie/laundry-email-template",
+    demoLink: "https://rosvie.github.io/laundry-email-template/",
+    skills: ["HTML", "SCSS", "Github"],
+  },
 ];
 
 function Sparkle({
