@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
-      <nav className="fixed left-0 right-0 top-0 z-50 flex flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-8 lg:px-12 shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_35px_60px_-15px_rgba(0,0,0,0.3),0_0_40px_rgba(255,255,255,0.06)] backdrop-blur-lg">
+      <nav className="fixed left-1/2 top-4 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full bg-black/40 px-4 py-3  backdrop-blur-sm md:px-8 lg:px-12">
         <div
           style={{ fontFamily: "var(--font-space-mono)" }}
           className="text-2xl font-semibold"
@@ -62,8 +62,8 @@ export default function Home() {
         <section id="about" className="scroll-mt-24 mt-20 px-8 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" >
           <div className="mx-auto flex flex-col items-center justify-center rounded-4xl w-full max-w-6xl py-16 sm:px-16 sm:py-20 lg:px-24 lg:py-28">
               <div className="availability">
-                <span className="availability-dot"></span>
-                Available for remote work
+                <span className="availability-dot" aria-hidden="true"></span>
+                Open for Opportunities
               </div>
             <h1
               className="mb-6 text-center text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"

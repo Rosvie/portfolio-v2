@@ -177,16 +177,24 @@ img {
 }
 
 .availability-dot {
-  width: 8px;
-  height: 8px;
-  background: #22c55e;
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+  background-color: rgb(12, 222, 12);
+  animation: breathe 2s ease-in-out infinite;
 }
 
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes breathe {
+  50% {
+    opacity: 0.6;
+    transform: scale(1.35);
   }
 }
 
