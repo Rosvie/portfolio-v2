@@ -33,6 +33,22 @@ const projects = [
     demoLink: "https://rosvie.github.io/laundry-email-template/",
     skills: ["HTML", "SCSS", "Github"],
   },
+      {
+    id: "northfield-home-health-services",
+    title: "Northfield Home Health Services",
+    tagline: "A custom WordPress theme for a mockup home health care agency.",
+    sourceLink: "https://github.com/Rosvie/wp-theme-healthcare",
+    demoLink: "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Rosvie/wp-theme-healthcare/main/dev/blueprint.json",
+    skills: ["HTML", "CSS3", "Javascript", "Github", "Wordpress", "PHP", "jQuery"],
+  },
+      {
+    id: "crave-corner",
+    title: "Crave Corner",
+    tagline: "A demo WordPress theme for a mockup snack and grocery store",
+    sourceLink: "https://github.com/Rosvie/wp-theme-grocery",
+    demoLink: "https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2FRosvie%2Fwp-theme-grocery%2Fmain%2Fdev%2Fblueprint.json",
+    skills: ["HTML", "CSS3", "Javascript", "Github", "Wordpress", "PHP", "jQuery"],
+  },
 ];
 
 function Sparkle({
@@ -104,12 +120,12 @@ export default function Projects() {
               <Sparkle className="sparkle-twinkle absolute right-14 bottom-40 h-3 w-3 text-gray-400" style={{ animationDelay: "0.6s" }} />
 
               <h3
-                className="relative z-10 mb-2 text-center text-2xl font-medium text-white sm:text-3xl"
+                className={`project-title-${project.id} relative z-10 mb-2 min-h-32 text-center text-2xl font-medium text-white sm:text-3xl`}
                 style={{ fontFamily: "var(--font-space-mono)" }}
               >
                 {project.title}
               </h3>
-              <p className="relative z-10 text-center text-sm text-gray-400">
+              <p className={`project-tagline-${project.id} relative z-10 min-h-32 text-center text-sm text-gray-400`}>
                 {project.tagline}
               </p>
 
