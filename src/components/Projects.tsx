@@ -17,7 +17,7 @@ const projects = [
     demoLink: "https://rosvie.github.io/email-template-sample/",
     skills: ["HTML", "SCSS", "Github"],
   },
-    {
+  {
     id: "food-decision-wheel",
     title: "What Should I Eat?",
     tagline: "May it be a game or curiosity. Add your options, spin the wheel, let it decide.",
@@ -25,15 +25,15 @@ const projects = [
     demoLink: "https://rosvie.github.io/food-decision-wheel/",
     skills: ["HTML", "CSS3", "Javascript", "Github"],
   },
-      {
+  {
     id: "laundry-email-template",
-    title: "Bubbly Basket Laundry Email Template",
-    tagline: "Bubbly Basket Laundry Email Template. A simple, colorful and responsive email template for a laundry business, built with SCSS.",
+    title: "Bubbly Basket Laundry",
+    tagline: "Email Template. A simple, colorful and responsive email template for a laundry business, built with SCSS.",
     sourceLink: "https://github.com/Rosvie/laundry-email-template",
     demoLink: "https://rosvie.github.io/laundry-email-template/",
     skills: ["HTML", "SCSS", "Github"],
   },
-      {
+  {
     id: "northfield-home-health-services",
     title: "Northfield Home Health Services",
     tagline: "A custom WordPress theme for a mockup home health care agency.",
@@ -41,13 +41,21 @@ const projects = [
     demoLink: "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Rosvie/wp-theme-healthcare/main/dev/blueprint.json",
     skills: ["HTML", "CSS3", "Javascript", "Github", "Wordpress", "PHP", "jQuery"],
   },
-      {
+  {
     id: "crave-corner",
     title: "Crave Corner",
     tagline: "A demo WordPress theme for a mockup snack and grocery store",
     sourceLink: "https://github.com/Rosvie/wp-theme-grocery",
     demoLink: "https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2FRosvie%2Fwp-theme-grocery%2Fmain%2Fdev%2Fblueprint.json",
     skills: ["HTML", "CSS3", "Javascript", "Github", "Wordpress", "PHP", "jQuery"],
+  },
+  {
+    id: "ms-craftiful",
+    title: "Ms. Craftiful",
+    tagline: "Responsive landing page for a custom pin badge shop, built with React and deployed on Vercel.",
+    sourceLink: "https://github.com/Rosvie/ms-craftiful",
+    demoLink: "https://ms-craftiful.vercel.app/",
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "Vite", "Node.js", "GitHub", "Vercel"],
   },
 ];
 
@@ -120,12 +128,12 @@ export default function Projects() {
               <Sparkle className="sparkle-twinkle absolute right-14 bottom-40 h-3 w-3 text-gray-400" style={{ animationDelay: "0.6s" }} />
 
               <h3
-                className={`project-title-${project.id} relative z-10 mb-2 min-h-32 text-center text-2xl font-medium text-white sm:text-3xl`}
+                className={`project-title-${project.id} relative z-10 mb-2 min-h-20 text-center text-2xl font-medium text-white sm:text-3xl`}
                 style={{ fontFamily: "var(--font-space-mono)" }}
               >
                 {project.title}
               </h3>
-              <p className={`project-tagline-${project.id} relative z-10 min-h-32 text-center text-sm text-gray-400`}>
+              <p className={`project-tagline-${project.id} relative z-10 min-h-20 text-center text-sm text-gray-400`}>
                 {project.tagline}
               </p>
 
