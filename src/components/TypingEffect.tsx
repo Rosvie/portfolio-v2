@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 const words = [
   "Frontend Developer",
   "Wordpress Frontend Developer",
+  "AI Prompt Engineer",
   "Video Editor",
   "AI Content Creator",
-  "Detail Oriented",
 ];
 
 interface Spark {
