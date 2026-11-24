@@ -10,107 +10,51 @@ const words = [
   "AI Content Creator",
 ];
 
-interface Spark {
-  id: number;
-  left: number;
-  top: number;
-  angle: number;
-  distance: number;
-}
-
+/** Cycles through professional roles with a typewriter effect. */
 export default function TypingEffect() {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [sparks, setSparks] = useState<Spark[]>([]);
-
-  const createSparks = () => {
-    const newSparks = Array.from({ length: 8 }, (_, i) => ({
-      id: Date.now() + i,
-      left: 0,
-      top: 0,
-      angle: (i / 8) * Math.PI * 2,
-      distance: 0,
-    }));
-    setSparks(newSparks);
-
-    // Remove sparks after animation
-    setTimeout(() => setSparks([]), 600);
-  };
+  const [deleting, setDeleting] = useState(false);
+  const [sparkles, setSparkles] = useState(false);
+  const word = words[index] ?? words[0];
 
   useEffect(() => {
-    const currentWord = words[index];
+    const finishedTyping = !deleting && text === word;
+    const delay = deleting ? 45 : finishedTyping ? 1200 : 90;
 
-    let typingSpeed = isDeleting ? 50 : 100;
-
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setText(currentWord.substring(0, text.length + 1));
- 
-        // finished typing
-        if (text === currentWord) {
-          createSparks();
-          typingSpeed = 1000; // delay before deleting
-          setTimeout(() => setIsDeleting(true), typingSpeed);
-        }
+    const timeout = window.setTimeout(() => {
+      if (finishedTyping) {
+        setDeleting(true);
+      } else if (deleting && text.length === 0) {
+        setDeleting(false);
+        setIndex((current) => (current + 1) % words.length);
       } else {
-        setText(currentWord.substring(0, text.length - 1));
-
-        // finished deleting
-        if (text === "") {
-          setIsDeleting(false);
-          setIndex((prev) => (prev + 1) % words.length);
-        }
+        const nextText = deleting ? text.slice(0, -1) : word.slice(0, text.length + 1);
+        setText(nextText);
+        if (nextText === word) setSparkles(true);
       }
-    }, typingSpeed);
+    }, delay);
 
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, index]);
+    return () => window.clearTimeout(timeout);
+  }, [deleting, text, word]);
+
+  useEffect(() => {
+    if (!sparkles) return;
+
+    const timeout = window.setTimeout(() => setSparkles(false), 700);
+    return () => window.clearTimeout(timeout);
+  }, [sparkles]);
 
   return (
-    <div className="relative inline-block">
-      <h1>
-        {text}
-        <span className="cursor">|</span>
-      </h1>
-
-      {/* Spark particles */}
-      {sparks.map((spark) => (
-        <div
-          key={spark.id}
-          className="absolute pointer-events-none"
-          style={{
-            left: `${text.length * 0.5}ch`,
-            top: "0.25em",
-            animation: `spark-fly 0.6s ease-out forwards`,
-            "--spark-angle": `${spark.angle}rad`,
-            "--spark-distance": "40px",
-          } as React.CSSProperties & Record<string, string>}
-        >
-          <div
-            className="w-1 h-1 bg-white rounded-full shadow-lg"
-            style={{
-              boxShadow: "0 0 6px #ffffff, 0 0 12px rgba(255,255,255,0.6)",
-            }}
-          />
-        </div>
-      ))}
-
-      <style>{`
-        @keyframes spark-fly {
-          0% {
-            opacity: 1;
-            transform: translate(0, 0);
-          }
-          100% {
-            opacity: 0;
-            transform: translate(
-              calc(cos(var(--spark-angle)) * var(--spark-distance)),
-              calc(sin(var(--spark-angle)) * var(--spark-distance))
-            );
-          }
-        }
-      `}</style>
-    </div>
+    <span className="typing-effect" aria-label="Frontend and WordPress developer">
+      <span aria-hidden="true">{text}</span>
+      <span className="typing-cursor" aria-hidden="true">▌</span>
+      {sparkles && (
+        <span className="typing-sparkles" aria-hidden="true">
+          <span>✦</span><span>✦</span><span>✧</span>
+          <span>✦</span><span>✧</span><span>✦</span>
+        </span>
+      )}
+    </span>
   );
 }

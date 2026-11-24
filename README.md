@@ -8,10 +8,10 @@ My personal portfolio as a Frontend & WordPress Developer: projects, work experi
 
 ## Features
 
-- Responsive single-page layout with a fixed, frosted-glass navigation bar
-- Typing-effect hero that cycles through my roles
-- Projects grid with live demo and source links for each project
-- Work experience carousel built from scratch: infinite auto-scroll, hover to pause, wheel and swipe momentum, and arrow buttons on mobile
+- Responsive single-page layout with a fixed, solid navigation bar
+- Illustrated hero with a two-column terminal graphic
+- Static work experience timeline
+- Projects grid with preview cards and live demo/source links
 - Contact section with email, LinkedIn and GitHub links
 
 ## Tech

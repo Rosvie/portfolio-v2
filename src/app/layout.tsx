@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Mono, Inter } from "next/font/google";
+import { Fredoka, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["400", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
   subsets: ["latin"],
 });
 
@@ -29,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceMono.variable} ${inter.variable} antialiased`}
+      className={`portfolio-document ${jetBrainsMono.variable} ${fredoka.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="portfolio-body">{children}</body>
     </html>
   );
 }

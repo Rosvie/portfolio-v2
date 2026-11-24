@@ -1,5 +1,3 @@
-"use client";
-
 const projects = [
   {
     id: "fortune-cookie",
@@ -7,7 +5,9 @@ const projects = [
     tagline: "Tap the cookie to crack it open!",
     sourceLink: "https://github.com/Rosvie/fortune-cookie",
     demoLink: "https://rosvie.github.io/fortune-cookie/",
-    skills: ["HTML", "CSS", "Javascript", "Typescript", "Vite"],
+    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Vite"],
+    color: "var(--palette-yellow)",
+    image: "/images/projects/img-fortune-cookie.png",
   },
   {
     id: "email-template",
@@ -15,165 +15,91 @@ const projects = [
     tagline: "A responsive email template for personal signatures.",
     sourceLink: "https://github.com/Rosvie/email-template-sample/",
     demoLink: "https://rosvie.github.io/email-template-sample/",
-    skills: ["HTML", "SCSS", "Github"],
+    skills: ["HTML", "SCSS", "GitHub"],
+    color: "var(--palette-pink)",
   },
   {
     id: "food-decision-wheel",
     title: "What Should I Eat?",
-    tagline: "May it be a game or curiosity. Add your options, spin the wheel, let it decide.",
+    tagline: "Add your options, spin the wheel, and let it decide.",
     sourceLink: "https://github.com/Rosvie/food-decision-wheel/",
     demoLink: "https://rosvie.github.io/food-decision-wheel/",
-    skills: ["HTML", "CSS3", "Javascript", "Github"],
+    skills: ["HTML", "CSS", "JavaScript"],
+    color: "var(--palette-mint)",
   },
   {
     id: "laundry-email-template",
     title: "Bubbly Basket Laundry",
-    tagline: "Email Template. A simple, colorful and responsive email template for a laundry business, built with SCSS.",
+    tagline: "A colorful and responsive email template for a laundry business.",
     sourceLink: "https://github.com/Rosvie/laundry-email-template",
     demoLink: "https://rosvie.github.io/laundry-email-template/",
-    skills: ["HTML", "SCSS", "Github"],
+    skills: ["HTML", "SCSS", "GitHub"],
+    color: "var(--palette-blue)",
   },
   {
     id: "northfield-home-health-services",
     title: "Northfield Home Health Services",
-    tagline: "A custom WordPress theme for a mockup home health care agency.",
+    tagline: "A custom WordPress theme for a mock home health care agency.",
     sourceLink: "https://github.com/Rosvie/wp-theme-healthcare",
     demoLink: "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/Rosvie/wp-theme-healthcare/main/dev/blueprint.json",
-    skills: ["HTML", "CSS3", "Javascript", "Github", "Wordpress", "PHP", "jQuery"],
+    skills: ["HTML", "CSS", "WordPress", "PHP"],
+    color: "var(--palette-orange)",
   },
   {
     id: "crave-corner",
     title: "Crave Corner",
-    tagline: "A demo WordPress theme for a mockup snack and grocery store",
+    tagline: "A demo WordPress theme for a mock snack and grocery store.",
     sourceLink: "https://github.com/Rosvie/wp-theme-grocery",
     demoLink: "https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2FRosvie%2Fwp-theme-grocery%2Fmain%2Fdev%2Fblueprint.json",
-    skills: ["HTML", "CSS3", "Javascript", "Github", "Wordpress", "PHP", "jQuery"],
+    skills: ["HTML", "CSS", "WordPress", "PHP"],
+    color: "var(--palette-yellow)",
   },
   {
     id: "ms-craftiful",
     title: "Ms. Craftiful",
-    tagline: "Responsive landing page for a custom pin badge shop, built with React and deployed on Vercel.",
+    tagline: "A responsive landing page for a custom pin badge shop, built with React and deployed on Vercel.",
     sourceLink: "https://github.com/Rosvie/ms-craftiful",
     demoLink: "https://ms-craftiful.vercel.app/",
-    skills: ["HTML5", "CSS3", "JavaScript", "React", "Vite", "Node.js", "GitHub", "Vercel"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Vite", "Node.js", "GitHub", "Vercel"],
+    color: "var(--palette-pink)",
+    featured: true,
   },
 ];
 
-function Sparkle({
-  className,
-  style,
-}: {
-  className?: string;
-  style?: React.CSSProperties;
-}) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-       style={style}
-      aria-hidden="true"
-    >
-      <path d="M12 0c0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12 0-6.627-5.373-12-12-12C6.627 12 12 6.627 12 0z" />
-    </svg>
-  );
-}
-
-
+/** Renders project cards with lightweight previews and direct links. */
 export default function Projects() {
   return (
-    <section id="projects" className="scroll-mt-24 w-full max-w-6xl">
-      <p
-        className="mb-8 text-3xl font-medium sm:text-4xl md:text-5xl"
-        style={{ fontFamily: "var(--font-space-mono)" }}
-      >
-        Projects
-      </p>
-      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <section className="projects-section" id="projects">
+      <h2 className="section-title">Projects</h2>
+      <div className="project-grid">
         {projects.map((project) => (
-          <div
+          <article
+            className={`project-card${project.featured ? " project-card-featured" : ""}`}
             key={project.id}
-            className="project-card dark-gradient relative flex min-h-[560px] flex-col overflow-hidden rounded-3xl border border-gray-800 transition hover:border-gray-600"
           >
-            {/* Thumbnail: image, no padding */}
-            <div className="project-thumbnail relative">
-              <div
-                className="pointer-events-none absolute inset-0 opacity-60 blur-3xl"
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%)",
-                }}
-              />
-              {/* <img
-                src={project.image}
-                alt={`${project.title} preview`}
-                className="relative h-56 w-full object-cover sm:h-64"
-              /> */}
-            
+            <div className="project-preview" style={{ backgroundColor: project.color }}>
               <iframe
                 src={project.demoLink}
                 title={`${project.title} preview`}
-                className="relative h-56 w-full border-0 sm:h-64"
+                className="project-preview-iframe"
                 loading="lazy"
               />
             </div>
-
-            {/* Details: title, tagline, buttons, skills */}
-            <div className="project-details relative z-10 flex flex-1 flex-col p-8 sm:p-10">
-              {/* Decorative sparkles */}
-              <Sparkle className="sparkle-twinkle absolute left-8 top-4 h-3 w-3 text-gray-500" />
-              <Sparkle className="sparkle-twinkle absolute right-16 top-8 h-6 w-6 text-yellow-400" style={{ animationDelay: "0.4s" }} />
-              <Sparkle className="sparkle-twinkle absolute right-8 top-16 h-3 w-3 text-gray-400" style={{ animationDelay: "0.9s" }} />
-              <Sparkle className="sparkle-twinkle absolute left-10 bottom-32 h-3 w-3 text-gray-500" style={{ animationDelay: "1.3s" }} />
-              <Sparkle className="sparkle-twinkle absolute right-14 bottom-40 h-3 w-3 text-gray-400" style={{ animationDelay: "0.6s" }} />
-
-              <h3
-                className={`project-title-${project.id} relative z-10 mb-2 min-h-20 text-center text-2xl font-medium text-white sm:text-3xl`}
-                style={{ fontFamily: "var(--font-space-mono)" }}
-              >
-                {project.title}
-              </h3>
-              <p className={`project-tagline-${project.id} relative z-10 min-h-20 text-center text-sm text-gray-400`}>
-                {project.tagline}
-              </p>
-
-              <div className="relative z-10 flex flex-wrap justify-center gap-2 my-6">
-                {project.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-gray-700 bg-gray-900/60 px-3 py-1 text-xs text-gray-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            <div className="project-content">
+              <div className="project-heading">
+                {project.featured && <p className="project-featured-label">Featured · Latest</p>}
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.tagline}</p>
               </div>
-
-              <div className="relative z-10 flex flex-wrap items-center justify-center gap-3">
-                {project.sourceLink && (
-                  <a
-                    href={project.sourceLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-lg border border-gray-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800"
-                  >
-                    Source Code
-                  </a>
-                )}
-                {project.demoLink && (
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-200"
-                  >
-                    Live Demo
-                  </a>
-                )}
+              <ul className="project-skills" aria-label={`${project.title} technologies`}>
+                {project.skills.map((skill) => <li key={skill}>{skill}</li>)}
+              </ul>
+              <div className="project-links">
+                <a href={project.sourceLink} target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
               </div>
-
-              
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
