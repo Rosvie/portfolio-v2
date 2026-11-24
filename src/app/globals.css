@@ -110,7 +110,6 @@ a:focus-visible {
   transform: translateX(-50%);
   isolation: isolate;
   color: var(--nav-text);
-  border: 1px solid var(--nav-border);
   border-radius: 999px;
   box-shadow: 0 8px 26px var(--palette-ink);
   backdrop-filter: blur(18px) saturate(125%);
@@ -1085,7 +1084,6 @@ a:focus-visible {
 }
 
 :root[data-theme="light"] .portfolio-nav {
-  border: 1px solid var(--nav-border);
   background: color-mix(in srgb, var(--panel-bg) 92%, transparent);
   box-shadow: 0 6px 22px color-mix(in srgb, var(--palette-ink) 16%, transparent);
 }
